@@ -17,7 +17,8 @@
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+                            <asp:TextBox ID="inputPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                           <%-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">--%>
                             <label for="inputPassword">Password</label>
                         </div>
                     </div>
@@ -37,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" BackColor="#99FF99" ></asp:TextBox>
     </div>
 
     <!-- Bootstrap core JavaScript-->

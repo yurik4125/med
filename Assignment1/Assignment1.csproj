@@ -76,6 +76,7 @@
     <Content Include="js\sb-admin.js" />
     <Content Include="js\sb-admin.min.js" />
     <Content Include="Register_User.aspx" />
+    <Content Include="t.aspx" />
     <Content Include="User.aspx" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
@@ -1652,6 +1653,13 @@
     </Compile>
     <Compile Include="Register_User.aspx.designer.cs">
       <DependentUpon>Register_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="t.aspx.cs">
+      <DependentUpon>t.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="t.aspx.designer.cs">
+      <DependentUpon>t.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
