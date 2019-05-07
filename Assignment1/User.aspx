@@ -5,20 +5,26 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="card card-login mx-auto mt-5">
-            <div class="card-header">Login</div>
+            <div class="card-header">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Medic %>" SelectCommand="SELECT * FROM [Users] WHERE ([userName] = @userName)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="userName" Name="userName" PropertyName="Text" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                Login</div>
             <div class="card-body">
                 <form>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <asp:TextBox ID="inputEmail" runat="server" CssClass="form-control"></asp:TextBox>
-                           <%-- <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">--%>
-                            <label for="inputEmail">Email address</label>
+                            <asp:TextBox ID="userName" runat="server" CssClass="form-control"></asp:TextBox>
+                          
+                            <label for=""userName">User name</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
                             <asp:TextBox ID="inputPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
-                           <%-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">--%>
+                        
                             <label for="inputPassword">Password</label>
                         </div>
                     </div>
@@ -30,7 +36,8 @@
                             </label>
                         </div>
                     </div>
-                    <a class="btn btn-primary btn-block" href="index.html">Login</a>
+                  
+                    <asp:Button CssClass="btn btn-primary btn-block" ID="btnLofin" runat="server" Text="Login" OnClick="btnLofin_Click" />
                 </form>
                 <div class="text-center">
                     <a class="d-block small mt-3" href="register.html">Register an Account</a>
