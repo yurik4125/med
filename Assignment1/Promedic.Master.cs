@@ -11,7 +11,19 @@ namespace Assignment1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["userName"] != null)
+            {
+                lbLogin.Visible = false;
+                lbUserWellcome.Text = "Wellcome " + Session["userName"].ToString();
+                btnLogOut.Visible = true;
+            }
+           
+        }
 
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Session.Remove("userName");
+            Response.Redirect("User.aspx");
         }
     }
 }

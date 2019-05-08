@@ -6,7 +6,7 @@
     <div class="container">
         <div class="card card-login mx-auto mt-5">
             <div class="card-header">
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Medic %>" SelectCommand="SELECT * FROM [Users] WHERE ([userName] = @userName)">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MedicConnectionString %>" SelectCommand="SELECT * FROM [Users] WHERE ([userName] = @userName)">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="userName" Name="userName" PropertyName="Text" Type="String" />
                     </SelectParameters>
@@ -16,14 +16,14 @@
                 <form>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <asp:TextBox ID="userName" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="userName" runat="server" CssClass="form-control">Omar.Omar</asp:TextBox>
                           
                             <label for=""userName">User name</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <asp:TextBox ID="inputPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="inputPassword" runat="server" TextMode="Password" CssClass="form-control">Omar5556</asp:TextBox>
                         
                             <label for="inputPassword">Password</label>
                         </div>
