@@ -38,32 +38,17 @@ namespace Assignment1
             if (userExists>0)
             {
                 
-                Session["userName"] = userName.Text;
-                Response.Redirect("Home.aspx");
+                Session["testsession"] =  userName.Text;
+                string un = Session["testsession"].ToString();
                 Response.Write("Login is successful ");
                 String query2 = "select Profile.profileName from Users , Profile, UserProfile" +
                                 " where Users.userID = UserProfile.userID and UserProfile.profileID = Profile.profileID and" +
                                 " Users.userID = " + userExists + "";
                 SqlCommand command2 = new SqlCommand(query2, myConn);
                 nameProfile = command2.ExecuteScalar().ToString();
-               
-                switch (nameProfile)
-                {
-                    case "Administrator":
-                        Response.Write("Administrator " + Session["userName"].ToString());
-                        break;
-                    case "Practitioner":
-                        Response.Write("Practitioner " + Session["userName"].ToString());
-                        break;
-                    case "Reception":
-                        Response.Write("Reception " + Session["userName"].ToString());
-                        break;
-                    case "Management":
-                        Response.Write("Management " + Session["userName"].ToString());
-                        break;
+                Session["profile"] = nameProfile;
+                Response.Redirect("Home.aspx");
 
-
-                }
 
 
 

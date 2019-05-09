@@ -16,14 +16,14 @@
                 <form>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <asp:TextBox ID="userName" runat="server" CssClass="form-control">Omar.Omar</asp:TextBox>
+                            <asp:TextBox ID="userName" runat="server" CssClass="form-control">Sue.Shwartz</asp:TextBox>
                           
                             <label for=""userName">User name</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <asp:TextBox ID="inputPassword" runat="server" TextMode="Password" CssClass="form-control">Omar5556</asp:TextBox>
+                            <asp:TextBox ID="inputPassword" runat="server" TextMode="Password" CssClass="form-control">Shwartz5556</asp:TextBox>
                         
                             <label for="inputPassword">Password</label>
                         </div>
@@ -31,7 +31,7 @@
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="remember-me">
+                                <input type="checkbox" value="remember-me" >
                                 Remember Password
                             </label>
                         </div>

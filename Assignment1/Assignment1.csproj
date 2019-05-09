@@ -67,15 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Appointment.aspx" />
     <Content Include="css\sb-admin.css" />
     <Content Include="css\sb-admin.min.css" />
     <Content Include="Home.aspx" />
+    <Content Include="image\Appointment.jpg" />
+    <Content Include="image\home.png" />
     <Content Include="js\demo\chart-area-demo.js" />
     <Content Include="js\demo\chart-bar-demo.js" />
     <Content Include="js\demo\chart-pie-demo.js" />
     <Content Include="js\demo\datatables-demo.js" />
     <Content Include="js\sb-admin.js" />
     <Content Include="js\sb-admin.min.js" />
+    <Content Include="prac.aspx" />
     <Content Include="Register_User.aspx" />
     <Content Include="t.aspx" />
     <Content Include="User.aspx" />
@@ -1640,12 +1644,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="prac.aspx.cs">
+      <DependentUpon>prac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prac.aspx.designer.cs">
+      <DependentUpon>prac.aspx</DependentUpon>
     </Compile>
     <Compile Include="Promedic.Master.cs">
       <DependentUpon>Promedic.Master</DependentUpon>
